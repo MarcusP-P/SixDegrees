@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SixDegrees.Shared
+namespace SixDegrees.SharedCode
 {
     public class WeatherForecast
     {
@@ -12,6 +10,6 @@ namespace SixDegrees.Shared
 
         public string Summary { get; set; }
 
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        public int TemperatureF => 32 + (int)(this.TemperatureC / 0.5556);
     }
 }
