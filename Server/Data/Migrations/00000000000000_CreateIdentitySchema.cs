@@ -16,10 +16,7 @@ namespace SixDegrees.Server.Data.Migrations
                     NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
-                constraints: table =>
-                {
-                    _ = table.PrimaryKey("PK_AspNetRoles", x => x.Id);
-                });
+                constraints: table => table.PrimaryKey("PK_AspNetRoles", x => x.Id));
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetUsers",
@@ -41,10 +38,7 @@ namespace SixDegrees.Server.Data.Migrations
                     LockoutEnabled = table.Column<bool>(type: "bit", nullable: false),
                     AccessFailedCount = table.Column<int>(type: "int", nullable: false)
                 },
-                constraints: table =>
-                {
-                    _ = table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
+                constraints: table => table.PrimaryKey("PK_AspNetUsers", x => x.Id));
 
             _ = migrationBuilder.CreateTable(
                 name: "DeviceCodes",
@@ -60,10 +54,7 @@ namespace SixDegrees.Server.Data.Migrations
                     Expiration = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Data = table.Column<string>(type: "nvarchar(max)", maxLength: 50000, nullable: false)
                 },
-                constraints: table =>
-                {
-                    _ = table.PrimaryKey("PK_DeviceCodes", x => x.UserCode);
-                });
+                constraints: table => table.PrimaryKey("PK_DeviceCodes", x => x.UserCode));
 
             _ = migrationBuilder.CreateTable(
                 name: "PersistedGrants",
@@ -80,10 +71,7 @@ namespace SixDegrees.Server.Data.Migrations
                     ConsumedTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Data = table.Column<string>(type: "nvarchar(max)", maxLength: 50000, nullable: false)
                 },
-                constraints: table =>
-                {
-                    _ = table.PrimaryKey("PK_PersistedGrants", x => x.Key);
-                });
+                constraints: table => table.PrimaryKey("PK_PersistedGrants", x => x.Key));
 
             _ = migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
