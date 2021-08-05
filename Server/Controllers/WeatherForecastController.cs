@@ -32,7 +32,7 @@ namespace SixDegrees.Server.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(summaries.Length)]
+                Summary = summaries[Random.Shared.Next(summaries.Length)]
             })
             .ToArray();
         }
