@@ -23,23 +23,23 @@ namespace SixDegrees.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    this.Configuration.GetConnectionString("DefaultConnection")));
+            _ = services.AddDbContext<ApplicationDbContext>(options =>
+                  options.UseSqlServer(
+                      this.Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDatabaseDeveloperPageExceptionFilter();
+            _ = services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            _ = services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddIdentityServer()
+            _ = services.AddIdentityServer()
                 .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
 
-            services.AddAuthentication()
+            _ = services.AddAuthentication()
                 .AddIdentityServerJwt();
 
-            services.AddControllersWithViews();
-            services.AddRazorPages();
+            _ = services.AddControllersWithViews();
+            _ = services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,33 +47,33 @@ namespace SixDegrees.Server
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
-                app.UseMigrationsEndPoint();
+                _ = app.UseDeveloperExceptionPage();
+                _ = app.UseMigrationsEndPoint();
                 app.UseWebAssemblyDebugging();
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                _ = app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                _ = app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseBlazorFrameworkFiles();
-            app.UseStaticFiles();
+            _ = app.UseHttpsRedirection();
+            _ = app.UseBlazorFrameworkFiles();
+            _ = app.UseStaticFiles();
 
-            app.UseRouting();
+            _ = app.UseRouting();
 
-            app.UseIdentityServer();
-            app.UseAuthentication();
-            app.UseAuthorization();
+            _ = app.UseIdentityServer();
+            _ = app.UseAuthentication();
+            _ = app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapRazorPages();
-                endpoints.MapControllers();
-                endpoints.MapFallbackToFile("index.html");
-            });
+            _ = app.UseEndpoints(endpoints =>
+              {
+                  _ = endpoints.MapRazorPages();
+                  _ = endpoints.MapControllers();
+                  _ = endpoints.MapFallbackToFile("index.html");
+              });
         }
     }
 }
