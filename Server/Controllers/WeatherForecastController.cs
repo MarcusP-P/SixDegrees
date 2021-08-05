@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SixDegrees.Shared;
+using SixDegrees.SharedCode;
 
 namespace SixDegrees.Server.Controllers
 {

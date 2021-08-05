@@ -1,6 +1,6 @@
 using System;
 
-namespace SixDegrees.Shared
+namespace SixDegrees.SharedCode
 {
     public class WeatherForecast
     {
