@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <PropertyGroup>
-  <AnalysisLevel>latest</AnalysisLevel>
-  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
-  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-</PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
 
-<ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.8" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="5.0.8" />
