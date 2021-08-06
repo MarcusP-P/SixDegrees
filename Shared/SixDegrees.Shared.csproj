@@ -4,7 +4,19 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+<PropertyGroup>
+  <AnalysisLevel>latest</AnalysisLevel>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+</PropertyGroup>
+
   <ItemGroup>
     <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="CLSCompliantAttribute">
+      <_Parameter1>true</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
 </Project>
