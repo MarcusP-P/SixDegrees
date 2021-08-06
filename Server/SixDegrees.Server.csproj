@@ -29,4 +29,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <AssemblyAttribute Include="CLSCompliantAttribute">
+      <_Parameter1>false</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
 </Project>
