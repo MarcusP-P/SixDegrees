@@ -7,6 +7,11 @@ namespace SixDegrees.Server.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            if (migrationBuilder is null)
+            {
+                throw new ArgumentNullException(nameof(migrationBuilder));
+            }
+
             _ = migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -247,6 +252,11 @@ namespace SixDegrees.Server.Data.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            if (migrationBuilder is null)
+            {
+                throw new ArgumentNullException(nameof(migrationBuilder));
+            }
+
             _ = migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
