@@ -26,6 +26,7 @@ namespace SixDegrees.Server.Controllers
         }
 
         [HttpGet]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA5394:Do not use insecure randomness", Justification = "This is only a toy that doesn't require stricter randomness.")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
