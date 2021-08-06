@@ -4,11 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
-<PropertyGroup>
-  <AnalysisLevel>latest</AnalysisLevel>
-  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
-  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-</PropertyGroup>
+  <PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
