@@ -22,7 +22,7 @@ namespace SixDegrees.Client
 
             _ = builder.Services.AddApiAuthorization();
 
-            await builder.Build().RunAsync();
+            await builder.Build().RunAsync().ConfigureAwait(false);
         }
     }
 }
