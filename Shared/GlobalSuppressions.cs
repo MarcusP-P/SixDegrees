@@ -5,4 +5,4 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Style", "IDE0130:Namespace does not match folder structure", Justification = "Supressing this is better than bad namespaces or renaming directories.", Scope = "namespace", Target = "~N:SixDegrees.SharedCode")]
+[assembly: SuppressMessage("Style", "IDE0130:Namespace does not match folder structure", Justification = "Suppressing this is better than bad namespaces or renaming directories.", Scope = "namespace", Target = "~N:SixDegrees.SharedCode")]
