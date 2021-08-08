@@ -8,4 +8,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "Will probably use this later.", Scope = "member", Target = "~F:SixDegrees.Server.Controllers.OidcConfigurationController.logger")]
 [assembly: SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "Will probably use this later.", Scope = "member", Target = "~F:SixDegrees.Server.Controllers.WeatherForecastController.logger")]
 [assembly: SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "Will probably use this later.", Scope = "member", Target = "~F:SixDegrees.Server.Pages.ErrorModel.logger")]
-[assembly: SuppressMessage("Style", "IDE0130:Namespace does not match folder structure", Justification = "Supressing this is better than bad namespaces or re-namiong directories.", Scope = "namespace", Target = "~N:SixDegrees.Server")]
+[assembly: SuppressMessage("Style", "IDE0130:Namespace does not match folder structure", Justification = "Suppressing this is better than bad namespaces or renaming directories.", Scope = "namespace", Target = "~N:SixDegrees.Server")]
