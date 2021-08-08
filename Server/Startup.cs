@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SixDegrees.Server.Data;
 using SixDegrees.Server.Models;
+using System;
 
 namespace SixDegrees.Server
 {
@@ -43,8 +44,15 @@ namespace SixDegrees.Server
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext dbContext)
         {
+            if (dbContext is null)
+            {
+                throw new ArgumentNullException(nameof(dbContext));
+            }
+
+            dbContext.Database.Migrate();
+
             if (env.IsDevelopment())
             {
                 _ = app.UseDeveloperExceptionPage();
