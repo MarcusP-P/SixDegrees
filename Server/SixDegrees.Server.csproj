@@ -6,6 +6,12 @@
     <UserSecretsId>SixDegrees.Server-31EBD870-E8BB-4116-8BAD-D000F4D4AAFD</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <AnalysisLevel>preview</AnalysisLevel>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0-preview.7.21378.6" />
   </ItemGroup>
@@ -22,6 +28,12 @@
     <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="6.0.0-preview.7.21378.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0-preview.7.21378.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0-preview.7.21378.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="CLSCompliantAttribute">
+      <_Parameter1>false</_Parameter1>
+    </AssemblyAttribute>
   </ItemGroup>
 
 </Project>

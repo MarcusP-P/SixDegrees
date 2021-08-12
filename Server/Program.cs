@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using SixDegrees.Server.Data;
 using SixDegrees.Server.Models;
@@ -26,6 +25,15 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
+// Migrate the database before we go any further. 
+// Make sure the instance of ApplicationDbContext goes out of scope and is removed when we are done.
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    dbContext.Database.Migrate();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -35,7 +43,7 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseExceptionHandler("/Error");
+    _ = app.UseExceptionHandler("/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -50,7 +58,6 @@ app.UseRouting();
 app.UseIdentityServer();
 app.UseAuthentication();
 app.UseAuthorization();
-
 
 app.MapRazorPages();
 app.MapControllers();
