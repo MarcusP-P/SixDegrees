@@ -32,7 +32,7 @@
                         <span class="oi oi-person" aria-hidden="true"></span>
                         <AuthorizeView>
                             <Authorized>
-                                @context.User.Identity.Name
+                                @context.User.Identity?.Name
                             </Authorized>
                             <NotAuthorized>
                                 Account
