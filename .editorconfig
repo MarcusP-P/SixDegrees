@@ -24,7 +24,7 @@ file_header_template = unset
 
 # this. and Me. preferences
 dotnet_style_qualification_for_event = true:warning
-dotnet_style_qualification_for_field = true
+dotnet_style_qualification_for_field = true:warning
 dotnet_style_qualification_for_method = true:warning
 dotnet_style_qualification_for_property = true:warning
 
@@ -239,6 +239,8 @@ dotnet_naming_style.camel_case.required_suffix =
 dotnet_naming_style.camel_case.word_separator = 
 dotnet_naming_style.camel_case.capitalization = camel_case
 
+# Analysers
+
 dotnet_diagnostic.RemoveUnnecessaryImportsFixable.severity=warning
 dotnet_analyzer_diagnostic.category-CodeQuality.severity = warning
 dotnet_analyzer_diagnostic.category-Compiler.severity = warning
@@ -256,5 +258,8 @@ dotnet_analyzer_diagnostic.category-Security.severity = warning
 dotnet_analyzer_diagnostic.category-Style.severity = warning
 dotnet_analyzer_diagnostic.category-Usage.severity = warning
 
+# The Analyser for CA2252 has a crasher in it. 
+# Remove this once the fix is released: https://github.com/dotnet/roslyn-analyzers/pull/5470
+dotnet_diagnostic.CA2252.severity=silent
+
 [*.{cs,vb}]
-dotnet_style_qualification_for_field=true:warning
