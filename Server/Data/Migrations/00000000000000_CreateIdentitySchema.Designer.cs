@@ -102,7 +102,7 @@ namespace SixDegrees.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasMaxLength(51410)
+                        .HasMaxLength(50450)
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
@@ -153,7 +153,7 @@ namespace SixDegrees.Server.Data.Migrations
                     b.Property<string>("Data")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasMaxLength(51410);
+                        .HasMaxLength(50450);
                         
                     b.Property<bool>("DataProtected")
                         .HasColumnType("bit");
@@ -194,7 +194,7 @@ namespace SixDegrees.Server.Data.Migrations
 
                     b.Property<string>("Data")
                         .IsRequired()
-                        .HasMaxLength(51410)
+                        .HasMaxLength(50450)
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
