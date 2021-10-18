@@ -258,8 +258,4 @@ dotnet_analyzer_diagnostic.category-Security.severity = warning
 dotnet_analyzer_diagnostic.category-Style.severity = warning
 dotnet_analyzer_diagnostic.category-Usage.severity = warning
 
-# The Analyser for CA2252 has a crasher in it. 
-# Remove this once the fix is released: https://github.com/dotnet/roslyn-analyzers/pull/5470
-dotnet_diagnostic.CA2252.severity=silent
-
 [*.{cs,vb}]
