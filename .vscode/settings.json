@@ -1,0 +1,55 @@
+{
+    "files.exclude": {
+        ".vs": true,
+        "**/bin": true,
+        "**/obj": true,
+        "packages/**": true
+    },
+    "search.exclude": {
+        "**/*.min.*": true,
+        "**/open-iconic/**": true,
+    },
+    "cSpell.enableFiletypes": [
+        "aspnetcorerazor",
+        "bat",
+        "csharp",
+        "css",
+        "editorconfig",
+        "html",
+        "json",
+        "jsonc",
+        "markdown",
+        "plaintext",
+        "xml"
+    ],
+    "cSpell.language": "en-GB",
+    "cSpell.words": [
+        "ASPNETCORE",
+        "Blazor",
+        "Flavor",
+        "Hsts",
+        "IMDB",
+        "Oidc",
+        "Prerelease",
+        "aspnet",
+        "blazorwasm",
+        "editorconfig",
+        "fetchdata",
+        "localdb",
+        "mssqllocaldb",
+        "nowrap",
+        "nvarchar",
+        "onclick",
+        "printf",
+        "stylesheet",
+        "tbody",
+        "thead",
+        "typeof"
+    ],
+    "markdownlint.config": {
+        "MD028": false,
+        "MD025": {
+            "front_matter_title": ""
+        }
+    },
+}
